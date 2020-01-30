@@ -16,11 +16,13 @@ public class JakartaJsonpServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
+        resp.setContentType("text/plain");
         PrintWriter pw = resp.getWriter();
-        pw.println("<html><body>");
-        pw.println("Json Provider is: " + JsonProvider.provider().getClass().getName());
-        pw.println("</body></html>");
+        try {
+            pw.println("Json Provider is: " + JsonProvider.provider().getClass().getName());
+        } catch (Throwable t) {
+            t.printStackTrace(pw);
+        }
         pw.close();
     }
 
