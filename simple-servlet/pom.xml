@@ -35,9 +35,37 @@
 
 	</dependencies>
 
-	<build>
-		<sourceDirectory>src/main/java</sourceDirectory>
 
+	<profiles>
+		<profile>
+			<id>with-provider</id>
+			<properties>
+		        <resources.dir>with-provider</resources.dir>
+		        <app.name>with-provider</app.name>
+		    </properties>
+		</profile>
+		<profile>
+			<id>no-provider</id>
+			<activation>
+		    	<activeByDefault>true</activeByDefault>
+		    </activation>
+		    <properties>
+		        <resources.dir>no-provider</resources.dir>
+		        <app.name>no-provider</app.name>
+		    </properties>
+		</profile>
+	</profiles>
+	
+	    
+
+	<build>
+		<finalName>${app.name}</finalName>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/${resources.dir}</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
