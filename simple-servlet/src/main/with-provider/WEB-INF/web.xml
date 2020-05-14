@@ -22,4 +22,7 @@
 		<url-pattern>/javaxJsonp</url-pattern>
 	</servlet-mapping>
 
+    <listener>
+        <listener-class>com.example.jmx.MBeanContextListener</listener-class>
+    </listener>
 </web-app>
