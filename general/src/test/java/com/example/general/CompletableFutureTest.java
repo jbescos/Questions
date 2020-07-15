@@ -12,7 +12,7 @@ public class CompletableFutureTest {
     public void runAync() throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(1);
         CompletableFuture.runAsync(() -> {
-            System.out.println("supplyAsync invoked countDown");
+            System.out.println(Thread.currentThread() + ": supplyAsync invoked countDown");
             latch.countDown();
         });
         latch.await(1000, TimeUnit.MILLISECONDS);
@@ -22,7 +22,7 @@ public class CompletableFutureTest {
     public void supplyAsync() throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(1);
         CompletableFuture.supplyAsync(() -> {
-            System.out.println("supplyAsync invoked countDown");
+            System.out.println(Thread.currentThread() + ": supplyAsync invoked countDown");
             latch.countDown();
             return null;
         });
