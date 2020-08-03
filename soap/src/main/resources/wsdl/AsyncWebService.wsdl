@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions targetNamespace="http://services/" name="AsyncWebService" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="http://services/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="AsyncWebServicePortTypePortBinding_WSAM_Addressing_Policy-AsyncWebServicePortTypePortBinding_WSAM_Addressing_Policy">
+    <wsam:Addressing>
+      <wsp:Policy/>
+    </wsam:Addressing>
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://services/" schemaLocation="AsyncWebService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getString">
+    <part name="parameters" element="tns:getString"/>
+  </message>
+  <message name="getStringResponse">
+    <part name="parameters" element="tns:getStringResponse"/>
+  </message>
+  <message name="getStock">
+    <part name="parameters" element="tns:getStock"/>
+  </message>
+  <message name="getStockResponse">
+    <part name="parameters" element="tns:getStockResponse"/>
+  </message>
+  <message name="getInt">
+    <part name="parameters" element="tns:getInt"/>
+  </message>
+  <message name="getIntResponse">
+    <part name="parameters" element="tns:getIntResponse"/>
+  </message>
+  <portType name="AsyncWebServicePortType">
+    <operation name="getString">
+      <input wsaw:Action="http://services/AsyncWebServicePortType/getStringRequest" wsam:Action="http://services/AsyncWebServicePortType/getStringRequest" message="tns:getString"/>
+      <output wsam:Action="http://services/AsyncWebServicePortType/getStringResponse" message="tns:getStringResponse"/>
+    </operation>
+    <operation name="getStock">
+      <input wsaw:Action="http://services/AsyncWebServicePortType/getStockRequest" wsam:Action="http://services/AsyncWebServicePortType/getStockRequest" message="tns:getStock"/>
+      <output wsam:Action="http://services/AsyncWebServicePortType/getStockResponse" message="tns:getStockResponse"/>
+    </operation>
+    <operation name="getInt">
+      <input wsaw:Action="http://services/AsyncWebServicePortType/getIntRequest" wsam:Action="http://services/AsyncWebServicePortType/getIntRequest" message="tns:getInt"/>
+      <output wsam:Action="http://services/AsyncWebServicePortType/getIntResponse" message="tns:getIntResponse"/>
+    </operation>
+  </portType>
+  <binding name="AsyncWebServicePortTypePortBinding" type="tns:AsyncWebServicePortType">
+    <wsaw:UsingAddressing/>
+    <wsp:PolicyReference URI="#AsyncWebServicePortTypePortBinding_WSAM_Addressing_Policy-AsyncWebServicePortTypePortBinding_WSAM_Addressing_Policy"/>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="getString">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getStock">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getInt">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="AsyncWebService">
+    <port name="AsyncWebServicePortTypePort" binding="tns:AsyncWebServicePortTypePortBinding">
+      <soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+    </port>
+  </service>
+</definitions>
+
