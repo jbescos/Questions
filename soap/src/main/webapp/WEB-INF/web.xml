@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.1">
-	<display-name>AsyncWebServiceWebApp</display-name>
+	<display-name>Soap</display-name>
 	<servlet>
-		<servlet-name>AsyncWebServiceServlethttp</servlet-name>
-		<servlet-class>services.AsyncWebService</servlet-class>
-		<load-on-startup>0</load-on-startup>
+		<servlet-name>HelloWorldWebService</servlet-name>
+		<servlet-class>es.tododev.ws.HelloWorldWebService</servlet-class>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>AsyncWebServiceServlethttp</servlet-name>
-		<url-pattern>/AsyncWebService</url-pattern>
+		<servlet-name>HelloWorldWebService</servlet-name>
+		<url-pattern>/HelloWorldWebService</url-pattern>
 	</servlet-mapping>
 </web-app>
