@@ -1,7 +1,5 @@
 package com.example.general;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class StreamsTest {
 

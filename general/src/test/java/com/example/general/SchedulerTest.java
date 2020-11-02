@@ -1,13 +1,13 @@
 package com.example.general;
 
-import static org.junit.Assert.assertTrue;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 public class SchedulerTest {
 

@@ -1,11 +1,11 @@
 package com.example.general;
 
-import static org.junit.Assert.assertTrue;
-
 import java.util.Map;
 import java.util.TreeMap;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 public class TreeMapTest {
     
