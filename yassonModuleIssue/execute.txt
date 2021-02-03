@@ -1,0 +1,2 @@
+mvn clean install && java -jar build/libs/yassonModuleIssue-all-1.0.jar
+curl --noproxy "*" -H "Content-Type: application/json" -X POST -d '{"name":"John","password":"test","email":"John@gmail.com"}' http://localhost:8080/account/test

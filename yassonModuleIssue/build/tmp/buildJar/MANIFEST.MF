@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: AccountServices Jar File Example
-Implementation-Version: 1.0
-Main-Class: es.tododev.yasson.Main
-
