@@ -34,6 +34,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
+                            <classpathPrefix>libs</classpathPrefix>
                             <mainClass>es.tododev.yassonbug.Main</mainClass>
                         </manifest>
                     </archive>
@@ -50,7 +51,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <outputDirectory>${project.build.directory}/libs</outputDirectory>
                             <overWriteReleases>false</overWriteReleases>
                             <overWriteSnapshots>false</overWriteSnapshots>
                             <overWriteIfNewer>true</overWriteIfNewer>
