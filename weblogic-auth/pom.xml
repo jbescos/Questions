@@ -63,6 +63,13 @@
 			<version>4.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.sample</groupId>
+			<artifactId>sample</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>/home/jbescos/workspace/weblogic/depot/src141200_build/Oracle_Home/wlserver/modules/com.oracle.weblogic.security.jar</systemPath>
+		</dependency>
 		<!-- uncomment this to get JSON support <dependency> <groupId>org.glassfish.jersey.media</groupId> 
 			<artifactId>jersey-media-json-binding</artifactId> </dependency> -->
 	</dependencies>
