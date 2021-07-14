@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<weblogic-web-app
+	xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<security-role-assignment>
+		<role-name>Admin</role-name>
+		<principal-name>Administrators</principal-name>
+	</security-role-assignment>
+
+</weblogic-web-app>
+
