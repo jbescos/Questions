@@ -26,7 +26,7 @@ public class FutureTest {
     @Test
     public void parallelAndWait() throws InterruptedException, ExecutionException {
         ExecutorService service = Executors.newFixedThreadPool(100);
-        int requests = 1000;
+        int requests = 10;
         List<Future<String>> pendings = new ArrayList<>();
         for (int i= 0;i<requests;i++) {
             final int index = i;
