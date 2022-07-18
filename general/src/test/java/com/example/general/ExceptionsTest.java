@@ -19,4 +19,9 @@ public class ExceptionsTest {
 		}
 	}
 	
+	@Test
+    public void printException() {
+	    System.out.println(new Exception("test").toString());
+	}
+	
 }
