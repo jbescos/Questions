@@ -1,6 +1,6 @@
 package com.example.general;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class ExampleClass {
