@@ -3,5 +3,8 @@ module com.example.general {
     requires jakarta.cdi;
     requires java.net.http;
     requires jakarta.el;
-    opens com.example.general to jakarta.cdi;
+    requires org.eclipse.yasson;
+    requires jakarta.json.bind;
+    // Yasson test
+    exports com.example.general;
 }
