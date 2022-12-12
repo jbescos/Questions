@@ -2,12 +2,10 @@ package com.example.general;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-
 import org.junit.Test;
 
 public class InputStreamTest {
@@ -26,6 +24,14 @@ public class InputStreamTest {
         InputStream in = InputStreamTest.class.getResourceAsStream("/test.txt");
         in = read(in);
         in = read(in);
+    }
+    
+    @Test
+    public void limitSize() throws IOException {
+        int length = 1000;
+        InputStream in = new ByteArrayInputStream(new byte[length]);
+        int availble = in.available();
+        assertEquals(availble, length);
     }
     
     private InputStream read(InputStream in) throws IOException {
