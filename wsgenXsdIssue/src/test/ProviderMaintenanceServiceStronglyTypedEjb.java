@@ -19,11 +19,11 @@ public class ProviderMaintenanceServiceStronglyTypedEjb {
     @WebMethod()
     @RequestWrapper(localName="createSupplier", className="test.ProviderMaintenanceServiceStronglyTypedCreateSupplierBean")
     @WebResult(name="responseInfo")
-    public test.ProviderMaintenanceResponseInfo createSupplier(@WebParam(name="supplier") test.Supplier supplier, @WebParam(name="asOfDate") java.lang.String asOfDate)  {
+    public test.xml.ProviderMaintenanceResponseInfo createSupplier(@WebParam(name="supplier") test.xml.Supplier supplier, @WebParam(name="asOfDate") java.lang.String asOfDate)  {
 
         try {
 
-            return new test.ProviderMaintenanceResponseInfo();
+            return new test.xml.ProviderMaintenanceResponseInfo();
         }
         catch (Exception e) {
             throw new RuntimeException(e);
