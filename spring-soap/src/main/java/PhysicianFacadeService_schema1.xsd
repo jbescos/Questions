@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:ns0="http://www.oracle.com/medrec" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.oracle.com/medrec">
+   <xsd:complexType name="authenticateAndReturnPhysician">
+      <xsd:sequence>
+         <xsd:element name="arg0" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="arg1" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="authenticateAndReturnPhysicianResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="ns0:authenticatedPhysician" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="authenticatePhysician">
+      <xsd:sequence>
+         <xsd:element name="arg0" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="arg1" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="authenticatePhysicianResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="xsd:boolean"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="authenticatedPhysician">
+      <xsd:complexContent>
+         <xsd:extension base="ns0:transferObject">
+            <xsd:sequence>
+               <xsd:element name="id" type="xsd:long" minOccurs="0"/>
+               <xsd:element name="name" type="ns0:personName" minOccurs="0"/>
+               <xsd:element name="username" type="xsd:string" minOccurs="0"/>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="transferObject"/>
+   <xsd:complexType name="domainModel" abstract="true"/>
+   <xsd:complexType name="personName">
+      <xsd:complexContent>
+         <xsd:extension base="ns0:domainModel">
+            <xsd:sequence>
+               <xsd:element name="firstName" type="xsd:string" minOccurs="0"/>
+               <xsd:element name="lastName" type="xsd:string" minOccurs="0"/>
+               <xsd:element name="middleName" type="xsd:string" minOccurs="0"/>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:element name="authenticateAndReturnPhysician" type="ns0:authenticateAndReturnPhysician"/>
+   <xsd:element name="authenticateAndReturnPhysicianResponse" type="ns0:authenticateAndReturnPhysicianResponse"/>
+   <xsd:element name="authenticatePhysician" type="ns0:authenticatePhysician"/>
+   <xsd:element name="authenticatePhysicianResponse" type="ns0:authenticatePhysicianResponse"/>
+</xsd:schema>
