@@ -1,11 +1,5 @@
 package com.oracle.medrec;
 
-import com.oracle.medrec.facade.PatientFacade;
-import com.oracle.medrec.facade.PhysicianFacade;
-import com.oracle.medrec.facade.RecordFacade;
-import com.oracle.medrec.facade.impl.PatientFacadeImpl;
-import com.oracle.medrec.facade.impl.PhysicianFacadeImpl;
-import com.oracle.medrec.facade.impl.RecordFacadeImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -48,21 +42,6 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         wsdl11Definition.setTargetNamespace("http://www.oracle.com/medrec");
         wsdl11Definition.setSchema(recordSchema);
         return wsdl11Definition;
-    }
-
-    @Bean(name = "patientFacade")
-    public PatientFacade patientFacade() {
-        return new PatientFacadeImpl();
-    }
-
-    @Bean(name = "physicianFacade")
-    public PhysicianFacade physicianFacade() {
-        return new PhysicianFacadeImpl();
-    }
-
-    @Bean(name = "recordFacade")
-    public RecordFacade recordFacade() {
-        return new RecordFacadeImpl();
     }
 
     @Bean
