@@ -5,6 +5,7 @@ module com.example.general {
     requires jakarta.el;
     requires org.eclipse.yasson;
     requires jakarta.json.bind;
+    requires jdk.jfr;
     // Yasson test
     exports com.example.general;
 }
